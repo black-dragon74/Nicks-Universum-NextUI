@@ -1,0 +1,45 @@
+// Inject TW
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  @apply m-0 p-0 box-border;
+}
+
+@layer utilities {
+  /* Chrome, Safari and Opera */
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  * {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}
+
+div#nav-flex-wrapper {
+  &::after {
+    pointer-events: none;
+    content: "";
+    height: 100%;
+    width: 90px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: linear-gradient(90deg, rgba(10, 11, 12, 0) 0, #0a0b0c);
+
+    @media (screen and min-width: 984px) {
+      & {
+        display: none;
+      }
+    }
+  }
+}
+
+:not(html.dark) {
+  div#nav-flex-wrapper::after {
+    display: none;
+  }
+}
