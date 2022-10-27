@@ -6,11 +6,15 @@ import GitHubIcon from "../icons/GitHubIcon"
 import Image from "next/image"
 import withLinkToURL from "../components/withLinkToURL"
 import toggleDarkMode from "../lib/toggleDarkMode"
+import useToggle from "../hooks/useToggle"
+import { useEffect } from "react"
 
 const InstaIconWithLink = withLinkToURL(InstaIcon)
 const GitHubIconWithLink = withLinkToURL(GitHubIcon)
 
 const HomePage = () => {
+  const [postTitle, togglePostTitle] = useToggle()
+
   return (
     <div className="dark:bg-gray-900 bg-slate-200">
       <header className="sticky top-0">
@@ -23,6 +27,7 @@ const HomePage = () => {
               {/* Logo start */}
               <div
                 data-logo-part
+                onClick={togglePostTitle}
                 className="flex items-center mr-8 shrink-0 hover:text-gray-400 ease-in-out transition-colors duration-300 cursor-pointer"
               >
                 <BulbIcon className="w-8 h-8 mr-2" />
@@ -35,10 +40,18 @@ const HomePage = () => {
 
               {/* Nav Menu Start */}
               <div className="relative overflow-hidden shrink-0">
-                <p className="absolute block top-0 transition-transform translate-y-12">
+                <p
+                  className={`absolute block top-0 transition-transform duration-200 ${
+                    !postTitle && "translate-y-12"
+                  }`}
+                >
                   One that got away
                 </p>
-                <nav className="flex gap-4 items-center">
+                <nav
+                  className={`flex gap-4 items-center transition-transform duration-200 ${
+                    postTitle && "-translate-y-12"
+                  }`}
+                >
                   <a
                     href="#"
                     className="hover:text-gray-400 ease-in-out transition-colors duration-300"
