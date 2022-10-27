@@ -21,8 +21,9 @@
 
 div#nav-flex-wrapper {
   &::after {
+    display: block;
     pointer-events: none;
-    content: "";
+    content: '';
     height: 100%;
     width: 90px;
     position: absolute;
@@ -38,7 +39,7 @@ div#nav-flex-wrapper {
   }
 }
 
-:not(html.dark) {
+html:not(.dark) {
   div#nav-flex-wrapper::after {
     display: none;
   }
