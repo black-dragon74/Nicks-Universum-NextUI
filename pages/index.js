@@ -81,13 +81,13 @@ const HomePage = () => {
                     >
                       Portfolio
                     </a>
-                    <div className="w-24 lg:hidden" />
+                    <div className="w-24 md:hidden" />
                   </nav>
                 </div>
                 {/* Nav Menu End */}
 
                 {/* Start - Desktop Social Menu */}
-                <div className="hidden lg:flex items-center gap-8 ml-auto">
+                <div className="hidden md:flex items-center gap-8 ml-auto">
                   <InstaIconWithLink className="w-6 h-6" href="/" />
                   <GitHubIconWithLink className="w-6 h-6" href="/" />
                   <DarkModeIcon
@@ -105,7 +105,7 @@ const HomePage = () => {
           <div className="h-full flex gap-4 justify-center items-center">
             <BulbIcon className="w-16 h-16" />
             <div className="flex flex-col">
-              <span className="text-4xl font-semibold">
+              <span className="text-2xl md:text-4xl font-semibold">
                 Nick&apos;s Universum
               </span>
               <p className="font-thin text-xl">Thoughts, stories and ideas.</p>
