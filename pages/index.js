@@ -17,13 +17,13 @@ const HomePage = () => {
 
   return (
     <div className="dark:bg-gray-900 bg-slate-200">
-      <header className="sticky top-0">
+      <header className="sticky top-0 dark:text-gray-300 text-black">
         <div
           data-outer-div
-          className=" dark:bg-black/80 bg-white/80 p-2 backdrop-blur-md"
+          className=" dark:bg-black/80 bg-white/80 backdrop-blur-md"
         >
           <div data-inner-div id="nav-flex-wrapper" className="container p-2">
-            <div className="flex dark:text-gray-300 text-black items-center justify-start overflow-scroll">
+            <div className="flex  items-center justify-start overflow-scroll">
               {/* Logo start */}
               <div
                 data-logo-part
@@ -94,6 +94,18 @@ const HomePage = () => {
           </div>
         </div>
       </header>
+
+      <div className="h-48 md:h-64 p-2 bg-white/80 dark:bg-black dark:text-gray-300">
+        <div className="h-full flex gap-4 justify-center items-center">
+          <BulbIcon className="w-16 h-16" />
+          <div className="flex flex-col">
+            <span className="text-4xl font-semibold">
+              Nick&apos;s Universum
+            </span>
+            <p className="font-thin text-xl">Thoughts, stories and ideas.</p>
+          </div>
+        </div>
+      </div>
 
       <main className="container p-4">
         <Image
