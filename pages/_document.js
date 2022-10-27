@@ -18,14 +18,19 @@ class MyDocument extends Document {
                   if (typeof window === 'undefined') {
                     return;
                   }
+                  
+                  // Lambdas responsible for setting and removing the dark mode class
+                  const handleMatch = () => document.documentElement.classList.add('dark');
+                  const handleNoMatch = () => document.documentElement.classList.remove('dark');
 
-                  // Add event listener for when user changes system theme
-                  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-                    if (e.matches) {
-                      document.documentElement.classList.add('dark');
-                    } else {
-                      document.documentElement.classList.remove('dark');
-                    }
+                  
+                  const darkEv = window.matchMedia('(prefers-color-scheme: dark)')
+                  darkEv.matches ? handleMatch() : handleNoMatch();
+
+                  darkEv.addEventListener('change', (e) => {
+                    if (window.userHasCustomDarkModePref === true) return
+
+                    e.matches ? handleMatch() : handleNoMatch();
                   });
 
                 })()
