@@ -1,13 +1,13 @@
-import BulbIcon from "../icons/BulbIcon"
-import DarkModeIcon from "../icons/DarkModeIcon"
-import InstaIcon from "../icons/InstaIcon"
-import GitHubIcon from "../icons/GitHubIcon"
+import BulbIcon from '../icons/BulbIcon'
+import DarkModeIcon from '../icons/DarkModeIcon'
+import InstaIcon from '../icons/InstaIcon'
+import GitHubIcon from '../icons/GitHubIcon'
 
-import Image from "next/image"
-import withLinkToURL from "../components/withLinkToURL"
-import toggleDarkMode from "../lib/toggleDarkMode"
-import useToggle from "../hooks/useToggle"
-import { useEffect } from "react"
+import Image from 'next/image'
+import withLinkToURL from '../components/withLinkToURL'
+import toggleDarkMode from '../lib/toggleDarkMode'
+import useToggle from '../hooks/useToggle'
+import { useEffect } from 'react'
 
 const InstaIconWithLink = withLinkToURL(InstaIcon)
 const GitHubIconWithLink = withLinkToURL(GitHubIcon)
@@ -42,14 +42,14 @@ const HomePage = () => {
               <div className="relative overflow-hidden shrink-0">
                 <p
                   className={`absolute block top-0 transition-transform duration-200 ${
-                    !postTitle && "translate-y-12"
+                    !postTitle && 'translate-y-12'
                   }`}
                 >
                   One that got away
                 </p>
                 <nav
                   className={`flex gap-4 items-center transition-transform duration-200 ${
-                    postTitle && "-translate-y-12"
+                    postTitle && '-translate-y-12'
                   }`}
                 >
                   <a
