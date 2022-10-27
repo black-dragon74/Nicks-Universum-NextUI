@@ -76,6 +76,7 @@ const HomePage = () => {
                   >
                     Portfolio
                   </a>
+                  <div className="w-24 lg:hidden" />
                 </nav>
               </div>
               {/* Nav Menu End */}
