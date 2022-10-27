@@ -3,7 +3,6 @@ import DarkModeIcon from '../icons/DarkModeIcon'
 import InstaIcon from '../icons/InstaIcon'
 import GitHubIcon from '../icons/GitHubIcon'
 
-import Image from 'next/image'
 import withLinkToURL from '../components/withLinkToURL'
 import toggleDarkMode from '../lib/toggleDarkMode'
 import useToggle from '../hooks/useToggle'
@@ -21,8 +20,8 @@ const HomePage = () => {
       <Head>
         <title>Nick&apos;s Universum - Beta</title>
       </Head>
-      <div className="dark:bg-gray-900 bg-slate-200">
-        <header className="sticky top-0 dark:text-gray-300 text-black">
+      <div className="dark:bg-white bg-slate-200">
+        <header className="sticky top-0 z-50 dark:text-gray-300 text-black">
           <div
             data-outer-div
             className=" dark:bg-black/80 bg-white/80 backdrop-blur-md"
@@ -113,32 +112,15 @@ const HomePage = () => {
           </div>
         </div>
 
-        <main className="container p-4">
-          <PostCard />
-          <Image
-            src="/images/a.jpeg"
-            width={1920}
-            height={1080}
-            alt="coming soon"
-            priority
-          />
-          <div className="h-40 bg-blue-500" />
-
-          <Image
-            src="/images/b.jpg"
-            width={1920}
-            height={1080}
-            alt="coming soon"
-          />
-          <div className="h-40 bg-blue-500" />
-
-          <Image
-            src="/images/c.jpg"
-            width={1920}
-            height={1080}
-            alt="coming soon"
-          />
-          <div className="h-[150vw] bg-blue-500" />
+        <main className="container">
+          <div
+            id="article-container"
+            className="flex flex-wrap pt-10 pb-[5vw] bg-white"
+          >
+            {[...Array(30).keys()].map((_, i) => (
+              <PostCard key={i} />
+            ))}
+          </div>
         </main>
       </div>
     </>
