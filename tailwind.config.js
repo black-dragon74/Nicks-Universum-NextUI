@@ -18,7 +18,11 @@ module.exports = {
         '2xl': '1240px',
       },
     },
-    extend: {},
+    extend: {
+      colors: {
+        muidark: '#303030',
+      },
+    },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/line-clamp')],
 }

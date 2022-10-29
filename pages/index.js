@@ -20,11 +20,11 @@ const HomePage = () => {
       <Head>
         <title>Nick&apos;s Universum - Beta</title>
       </Head>
-      <div className="dark:bg-white bg-slate-200">
+      <div className="bg-white dark:bg-muidark">
         <header className="sticky top-0 z-50 dark:text-gray-300 text-black">
           <div
             data-outer-div
-            className=" dark:bg-black/80 bg-white/80 backdrop-blur-md"
+            className=" dark:bg-muidark/80 bg-white/80 backdrop-blur-md"
           >
             <div data-inner-div id="nav-flex-wrapper" className="container p-2">
               <div className="flex  items-center justify-start overflow-scroll">
@@ -100,7 +100,7 @@ const HomePage = () => {
           </div>
         </header>
 
-        <div className="h-48 md:h-64 p-2 bg-white/80 dark:bg-black dark:text-gray-300">
+        <div className="h-48 md:h-64 p-2 dark:text-gray-300">
           <div className="h-full flex gap-4 justify-center items-center">
             <BulbIcon className="w-16 h-16" />
             <div className="flex flex-col">
@@ -113,10 +113,7 @@ const HomePage = () => {
         </div>
 
         <main className="container">
-          <div
-            id="article-container"
-            className="flex flex-wrap pt-10 pb-[5vw] bg-white"
-          >
+          <div id="article-container" className="flex flex-wrap pt-10 pb-[5vw]">
             {[...Array(30).keys()].map((_, i) => (
               <PostCard key={i} />
             ))}
