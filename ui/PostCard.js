@@ -4,7 +4,7 @@ const PostCard = () => {
   return (
     <article className="relative p-6 flex flex-col grow shrink basis-1/1 md:basis-1/2 xl:basis-1/3 min-h-[220px]">
       {/* Treat this div as an image tag, because we are using fill on next/image */}
-      <div className="relative h-[250px] lg:h-[200px] w-full overflow-hidden">
+      <div className="relative h-[250px] md:h-[180px] lg:h-[200px] w-full overflow-hidden">
         <Image
           src="/images/c.jpg"
           fill

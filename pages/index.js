@@ -8,6 +8,7 @@ import toggleDarkMode from '../lib/toggleDarkMode'
 import useToggle from '../hooks/useToggle'
 import PostCard from '../ui/PostCard'
 import Head from 'next/head'
+import Footer from '../ui/Footer'
 
 const InstaIconWithLink = withLinkToURL(InstaIcon)
 const GitHubIconWithLink = withLinkToURL(GitHubIcon)
@@ -119,6 +120,8 @@ const HomePage = () => {
             ))}
           </div>
         </main>
+
+        <Footer />
       </div>
     </>
   )
